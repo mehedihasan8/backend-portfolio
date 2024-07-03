@@ -4,9 +4,11 @@ const createSkill = async (skill: TSkill) => {
   const newSkill = await Skill.create(skill);
   return newSkill;
 };
+
 const getAllSkill = async () => {
-  const getSkill = await Skill.find();
-  return getSkill;
+  const getFrontendSkill = await Skill.find({ stack: 'frontend' });
+  const getBackendSkill = await Skill.find({ stack: 'backend' });
+  return { getFrontendSkill, getBackendSkill };
 };
 
 const deleteSkill = async (id: string) => {
