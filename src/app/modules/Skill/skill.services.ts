@@ -1,4 +1,4 @@
-import Skill, { TSkill } from './Skill.model';
+import Skill, { TSkill } from './skill.model';
 
 const createSkill = async (skill: TSkill) => {
   const newSkill = await Skill.create(skill);
