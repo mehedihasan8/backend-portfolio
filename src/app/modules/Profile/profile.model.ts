@@ -17,9 +17,7 @@ const profileSchema = new Schema<TProfile>({
   socialLinks: {
     linkedin: { type: String, default: userData.socialLinks.linkedin },
     github: { type: String, default: userData.socialLinks.github },
-    x: { type: String, default: userData.socialLinks.x },
     facebook: { type: String, default: userData.socialLinks.facebook },
-    youtube: { type: String, default: userData.socialLinks.youtube },
   },
   contact: {
     phone: { type: String, default: userData.contact.phone },

@@ -24,6 +24,16 @@ const getAllSkill = catchAsync(async (req: Request, res: Response) => {
     data: result,
   });
 });
+const getAllSkillDashboard = catchAsync(async (req: Request, res: Response) => {
+  const result = await skillServices.getAllSkillDashboard();
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Get all skill successfully!',
+    data: result,
+  });
+});
 const deleteSkill = catchAsync(async (req: Request, res: Response) => {
   const result = await skillServices.deleteSkill(req.params.id);
 
@@ -39,6 +49,7 @@ const skillControllers = {
   createSkill,
   getAllSkill,
   deleteSkill,
+  getAllSkillDashboard,
 };
 
 export default skillControllers;
