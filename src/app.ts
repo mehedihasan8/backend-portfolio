@@ -5,7 +5,12 @@ import globalErrorHandler from './app/middlewares/globalErrorHandler';
 import notFound from './app/middlewares/notFound';
 import router from './app/routes';
 const app: Application = express();
-const allowedOrigins = ['http://localhost:5174', 'http://localhost:5173'];
+const allowedOrigins = [
+  'http://localhost:5174',
+  'http://localhost:5173',
+  'https://mehedi-hasan-foysal-dashboard.vercel.app',
+  'https://mehedi-hasan-foysal.vercel.app',
+];
 app.use(
   cors({
     origin: allowedOrigins,
